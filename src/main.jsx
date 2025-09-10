@@ -1,14 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import NunitoSansRegular from "./assets/fonts/nunito-sans-v18-latin-regular.woff2";
 import NunitoSansSemiBold from "./assets/fonts/nunito-sans-v18-latin-600.woff2";
 import NunitoSansBold from "./assets/fonts/nunito-sans-v18-latin-700.woff2";
+import "./index.css";
 
 const theme = createTheme({
+  palette: {
+    background: {
+      default: "#f4f9fd",
+    },
+  },
   typography: {
     fontFamily: [
       "Nunito Sans",

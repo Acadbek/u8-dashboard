@@ -5,8 +5,7 @@
     font-weight: 400;
     src:
         local("Nunito Sans"),
-        url("./assets/fonts/nunito-sans-v18-latin-regular.woff2")
-            format("woff2");
+        url("./assets/fonts/nunito-sans-v18-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -27,4 +26,8 @@
     src:
         local("Nunito Sans Bold"),
         url("./assets/fonts/nunito-sans-v18-latin-700.woff2") format("woff2");
+}
+
+body {
+    padding: 20px;
 }
