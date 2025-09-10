@@ -1,5 +1,3 @@
-/* index.css */
-
 @font-face {
     font-family: "Nunito Sans";
     font-style: normal;
@@ -30,9 +28,3 @@
         local("Nunito Sans Bold"),
         url("./assets/fonts/nunito-sans-v18-latin-700.woff2") format("woff2");
 }
-
-body {
-    font-family: "Nunito Sans", "Roboto", "Helvetica Neue", Arial, sans-serif;
-}
-
-/* Boshqa CSS kodlaringiz... */
