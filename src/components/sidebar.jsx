@@ -24,6 +24,10 @@ const LinkComponent = ({ title, icon, link }) => {
 }
 
 const stylesSidebar = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  overflow: 'auto',
   paddingLeft: '16px',
   paddingRight: '12px',
   backgroundColor: '#fff',
@@ -52,26 +56,28 @@ const stylesLogout = {
 
 const Sidebar = () => {
   return (
-    <Box width={200} height='100%' sx={stylesSidebar}>
-      <Link to='/' style={{ padding: '', display: 'block' }}>
-        <img src={logo} />
-      </Link>
-      <Stack sx={{ marginTop: '10px' }} direction="column" spacing={2}>
-        {links.map((item) => (
-          <LinkComponent
-            key={item.id}
-            title={item.title}
-            icon={item.icon}
-            link={item.link}
-          />
-        ))}
-      </Stack>
-
-      <Box sx={stylesSupport}>
-        <Link to='/support'>
-          <img src={supportImage} />
+    <Box sx={{ width: '100%', border: 'solid 1px red' }}>
+      <Box width={200} height='100%' sx={stylesSidebar}>
+        <Link to='/' style={{ padding: '', display: 'block' }}>
+          <img src={logo} />
         </Link>
-        <Button sx={stylesLogout}> <LogoutOutlinedIcon /> Logout</Button>
+        <Stack sx={{ marginTop: '10px' }} direction="column" spacing={2}>
+          {links.map((item) => (
+            <LinkComponent
+              key={item.id}
+              title={item.title}
+              icon={item.icon}
+              link={item.link}
+            />
+          ))}
+        </Stack>
+
+        <Box sx={stylesSupport}>
+          <Link to='/support'>
+            <img src={supportImage} />
+          </Link>
+          <Button sx={stylesLogout}> <LogoutOutlinedIcon /> Logout</Button>
+        </Box>
       </Box>
     </Box>
   )
